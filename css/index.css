@@ -1,0 +1,90 @@
+.wrap{
+    position: relative;
+    width: 200px;
+    top: 50px;
+    left: 50px;
+}
+.wrap ul{
+    list-style: none;
+    padding: 15px 0;
+    margin: 0;
+    background-color: #6c6669;
+    border-right-width: 0;
+}
+.wrap ul li{
+    display: block;
+    position: relative;
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    padding-left:12px;
+}
+.wrap ul li.active{
+    background-color: #999395;
+}
+.wrap ul li span:hover{
+    color: red;
+}
+
+
+
+.none{
+    display: none;
+}
+#sub {
+    position: absolute;
+    width: 600px;
+    border: 1px solid #f7f7f7;
+    background-color: #f7f7f7;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, .3);
+    left: 200px;
+    top: 0;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 0;
+}
+.content-none a{
+    font-size: 12px;
+    color: #666;
+    text-decoration: none;
+}
+.content-none dd a {
+    border-left: 1px solid #e0e0e0;
+    padding: 0 10px;
+    margin: 4px 0;
+}
+.content-none dl{
+    overflow: hidden;
+}
+.content-none dt{
+    float: left;
+    width: 70px;
+    /*clear: left;*/
+    position: relative;
+    font-weight:bold;
+    /*margin-left:25px;*/
+}
+.content-none dd{
+    float: left;
+    margin-left:2px;
+    border-top:1px solid #eee;
+    margin-bottom:5px;
+}
+.content-none dt i{
+    width: 4px;
+    height: 14px;
+    font-size: 9px;
+    line-height:14px;
+    position: absolute;
+    right: 30px;
+    top: 5px;
+}
+
+
+
+
+
+
+
