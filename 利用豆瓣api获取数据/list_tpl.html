@@ -1,0 +1,29 @@
+<div style="text-align: center;" ng-show="isLoading">
+    <img src="images/loading.gif" alt="" style="width:300px;height:300px;">
+</div>
+
+<div ng-hide="isLoading">
+<h1 ng-bind="data.title"></h1>
+<div class="list">
+    <a href="#!/detail/{{movie.id}}" ng-repeat="movie in data.subjects">
+        <dl>
+            <dt><img ng-src="{{movie.images.small}}" alt=""></dt>
+            <dd>
+                <h4 ng-bind="movie.title"></h4>
+                <p>类型: {{movie.genres}}</p>
+                <p>导演: <span class="perDir" ng-repeat="dir in movie.directors">{{dir.name}}</span></p>
+                <p>主演: <span class="perDir" ng-repeat="dir in movie.casts">{{dir.name}}</span></p>
+            </dd>
+            <span class="score" ng-show="movie.rating.average == 0 ?false:true">{{movie.rating.average}}分</span>
+            <span class="score" ng-hide="movie.rating.average == 0 ?false:true">暂无评分</span>
+        </dl>
+    </a>
+</div>
+
+<div class="page">
+    <a ng-click="page(true)" ng-show="isHidePre">上一页</a>
+    <span>{{curPage}}/{{totalPage}}</span>
+    <a ng-click="page(no)" ng-show="isHideNext">下一页</a>
+</div>
+
+</div>

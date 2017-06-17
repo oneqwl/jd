@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="xmgController">
+<head>
+    <meta charset="UTF-8">
+    <title ng-bind="title"></title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        a{
+            text-decoration: none;
+        }
+        .perDir{
+            margin-right:10px;
+        }
+        .img{
+            float: left;
+        }
+        .page{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <span>豆瓣电影</span>
+    <div class="search">
+            <input type="text" value="请输入要搜索的内容...">
+            <button>搜索</button>
+    </div>
+</div>
+<div class="content">
+    <div class="content_l">
+        <ul>
+            <li sel= "active"><a href="#!/movie/in_theaters">热门电影</a></li>
+            <li sel= "active"><a href="#!/movie/coming_soon">即将上映</a></li>
+            <li sel= "active"><a href="#!/movie/top250">top250电影</a></li>
+        </ul>
+
+    </div>
+    <div class="content_r">
+        <div ng-view></div>
+    </div>
+</div>
+<script src="js/lib/angular1.6.js"></script>
+<script src="js/lib/angular-route.js"></script>
+<script src="js/app.js"></script>
+<script src="js/value/value.js"></script>
+<script src="js/config/config.js"></script>
+<script src="js/controller/MovieController.js"></script>
+<script src="js/controller/DetailController.js"></script>
+<script src="js/service/service.js"></script>
+<script src="js/directive/sel.js"></script>
+</body>
+
+</html>

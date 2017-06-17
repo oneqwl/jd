@@ -1,0 +1,19 @@
+<h1>电影详情</h1>
+
+<div class="detail_content">
+    <dl class="detail_dl">
+        <dt><img ng-src="{{data.images.large}}" width="300px" height="400px"></dt>
+        <dd>
+            <h4 ng-bind="data.title"></h4>
+            <p>类型:{{data.genres}}</p>
+            <p>导演: <span class="perDir" ng-repeat="dir in data.directors">{{dir.name}}</span></p>
+            <p>主演: <span class="perDir" ng-repeat="dir in data.casts">{{dir.name}}</span></p>
+            <p>年份: {{data.year}}</p>
+            <p>国家: {{data.countries}}</p>
+            <p>评分人数: {{data.reviews_count}}</p>
+            <p>想看人数: {{data.wish_count}}</p>
+            <p>主演:</p><div class="img" ng-repeat="person in data.casts"><img ng-src={{person.avatars.small}} alt=""><span ng-bind="person.name"></span></div>
+        </dd>
+    </dl>
+</div>
+<div>简介: {{data.summary}}</div>
